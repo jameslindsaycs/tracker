@@ -1,24 +1,18 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
 
 <h1>Athletes</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Strength</th>
-      <th>Speed</th>
-      <th>Technique</th>
-      <th>Agility</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  
 
   <tbody>
     <% @athletes.each do |athlete| %>
-      <tr>
+      <%= content_tag :tr, class: cycle('list_line_odd', 'list_line_even') do %>
+  <td>
+    <%= image_tag(athlete.image_url, class: 'list_image') %>
+  </td>
         <td><%= athlete.name %></td>
         <td><%= athlete.description %></td>
         <td><%= athlete.image_url %></td>
@@ -26,10 +20,13 @@
         <td><%= athlete.speed %></td>
         <td><%= athlete.technique %></td>
         <td><%= athlete.agility %></td>
-        <td><%= link_to 'Show', athlete %></td>
-        <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
-        <td><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td class='list_actions'>
+  <%= link_to 'Show', athlete %><br/>
+  <%= link_to 'Edit', edit_athlete_path(athlete) %><br/>
+  <%= link_to 'Destroy', athlete, method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+</td>
+     <% end %>
     <% end %>
   </tbody>
 </table>
