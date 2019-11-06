@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @athlete.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @athlete.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @athlete.image_url %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @athlete.strength %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @athlete.speed %>
+</p>
+
+<p>
+  <strong>Technique:</strong>
+  <%= @athlete.technique %>
+</p>
+
+<p>
+  <strong>Agility:</strong>
+  <%= @athlete.agility %>
+</p>
+
+<%= link_to 'Edit', edit_athlete_path(@athlete) %> |
+<%= link_to 'Back', athletes_path %>

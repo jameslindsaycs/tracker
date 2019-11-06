@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  image_url: MyString
+  strength: 
+  speed: 
+  technique: 
+  agility: 
+
+two:
+  name: MyString
+  description: MyText
+  image_url: MyString
+  strength: 
+  speed: 
+  technique: 
+  agility: 
