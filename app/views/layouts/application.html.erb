@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tracker</title>
+    <title>Tracking Application</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
+
+  <!--Including a navbar from bootstrap-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Athlete List</a>
+    <ul>
+      <li><a = href="#">Home</a></li>
+      <li><a = href="#">Athlete List</a></li>
+      <li><a = href="#">FAQ</a></li>
+      <li><a = href="#">Contact</a></li>
+    </ul>
+</nav>
 
   <body>
   <%= content_tag :main, class: controller.controller_name do %>
