@@ -2,11 +2,6 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-
-<head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
-
-
-
 <table>
   
 
@@ -17,17 +12,12 @@
     <%= image_tag(athlete.image_url, class: 'list_image') %>
   </td>
         <td><%= athlete.name %></td>
-        <td><%= athlete.description %></td>
-        <td><%= athlete.image_url %></td>
-        <td><%= athlete.strength %></td>
-        <td><%= athlete.speed %></td>
-        <td><%= athlete.technique %></td>
-        <td><%= athlete.agility %></td>
+        
         <td class='list_actions'>
-  <%= link_to 'Show', athlete %><br/>
-  <%= link_to 'Edit', edit_athlete_path(athlete) %><br/>
-  <%= link_to 'Destroy', athlete, method: :delete,
-      data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'More Information', athlete %><br/>
+  <%= link_to 'Edit this Athlete', edit_athlete_path(athlete) %><br/>
+  <%= link_to 'Remove this Athlete', athlete, method: :delete,
+      data: { confirm: 'Are you sure you want to remove this athlete?' } %>
 </td>
      <% end %>
     <% end %>
@@ -36,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Athlete', new_athlete_path %>
+<%= link_to 'Add a New Athlete', new_athlete_path %>
