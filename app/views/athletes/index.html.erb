@@ -12,7 +12,12 @@
   <td>
     <%= image_tag(athlete.image_url, class: 'list_image') %>
   </td>
-        <td><%= athlete.name %></td>
+        
+        <td><p>Name</p><%= athlete.name %></td>
+        <td><p>Strength</p><%= athlete.strength %></td>
+        <td><p>Speed</p><%= athlete.speed %></td>
+        <td><p>Technique</p><%= athlete.technique %></td>
+        <td><p>Agility</p><%= athlete.agility %></td>
         
         <td class='list_actions'>
   <%= link_to 'Athlete Information', athlete %><br/>
