@@ -1,3 +1,4 @@
+<h1>Athlete List</h1>
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
@@ -14,10 +15,10 @@
         <td><%= athlete.name %></td>
         
         <td class='list_actions'>
-  <%= link_to 'More Information', athlete %><br/>
-  <%= link_to 'Edit this Athlete', edit_athlete_path(athlete) %><br/>
-  <%= link_to 'Remove this Athlete', athlete, method: :delete,
-      data: { confirm: 'Are you sure you want to remove this athlete?' } %>
+  <%= link_to 'Athlete Information', athlete %><br/>
+  <%= link_to 'Edit Athlete', edit_athlete_path(athlete) %><br/>
+  <%= link_to 'Remove Athlete', athlete, method: :delete,
+      data: { confirm: 'Are you sure you want to remove this athlete from the team?' } %>
 </td>
      <% end %>
     <% end %>
@@ -26,4 +27,4 @@
 
 <br>
 
-<%= link_to 'Click here to add a new athlete to your team', new_athlete_path %>
+<%= link_to 'Click here to add a new athlete to the team', new_athlete_path %>
